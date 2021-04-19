@@ -1,8 +1,8 @@
-[gd_scene load_steps=107 format=2]
+[gd_scene load_steps=108 format=2]
 
 [ext_resource path="res://Scripts/buraco.gd" type="Script" id=1]
 [ext_resource path="res://Itens/Trofeu.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Personagens/Chefão.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Personagens/SelecaoAlemanha.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Personagens/Neymar.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Materiais/BackGround/maracana-bg-4.jpg" type="Texture" id=5]
 [ext_resource path="res://Materiais/Mapa/Mapa.png" type="Texture" id=6]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Materiais/Mapa/Mapa2.png" type="Texture" id=9]
 [ext_resource path="res://Materiais/BackGround/campo de futebol.jpg" type="Texture" id=10]
 [ext_resource path="res://Personagens/juiz.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scripts/Reset_Level.gd" type="Script" id=12]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -2278,6 +2279,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 extents = Vector2( 182.165, 10 )
 
 [node name="Fase1" type="Node2D"]
+script = ExtResource( 12 )
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -2301,7 +2303,7 @@ position = Vector2( 1308.61, 74.0102 )
 scale = Vector2( 0.22367, 0.22367 )
 texture = ExtResource( 5 )
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="Cena" type="TileMap" parent="."]
 tile_set = SubResource( 94 )
 cell_size = Vector2( 16, 16 )
 collision_layer = 8
@@ -2314,21 +2316,11 @@ tile_data = PoolIntArray( -983046, 94, 0, -983045, 94, 0, -983044, 94, 0, -98304
 [node name="Neymar" parent="Personagens" instance=ExtResource( 4 )]
 position = Vector2( 32.4191, 145.092 )
 
-[node name="Chefão" parent="Personagens" instance=ExtResource( 3 )]
-position = Vector2( 1559.83, 142.411 )
-
 [node name="Juiz" parent="Personagens" instance=ExtResource( 11 )]
 position = Vector2( 306.852, 178.189 )
 
-[node name="buraco" type="Area2D" parent="."]
-position = Vector2( 955.835, 277.581 )
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="buraco"]
-shape = SubResource( 95 )
+[node name="Selecao_Alemanha" parent="Personagens" instance=ExtResource( 3 )]
+position = Vector2( 1568.99, 146.215 )
 
 [node name="Trofeus" type="Node2D" parent="."]
 
@@ -2349,4 +2341,14 @@ position = Vector2( 226.019, 59.5939 )
 
 [node name="Trofeu6" parent="Trofeus" instance=ExtResource( 2 )]
 position = Vector2( 222.682, 163.044 )
+
+[node name="buraco" type="Area2D" parent="."]
+position = Vector2( 955.835, 277.581 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="buraco"]
+shape = SubResource( 95 )
 [connection signal="body_entered" from="buraco" to="buraco" method="_on_buraco_body_entered"]
