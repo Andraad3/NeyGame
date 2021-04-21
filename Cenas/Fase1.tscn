@@ -14,7 +14,6 @@
 [ext_resource path="res://Scripts/Reset_Level.gd" type="Script" id=12]
 [ext_resource path="res://Cenas/HUD.tscn" type="PackedScene" id=13]
 
-
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
@@ -2355,4 +2354,5 @@ __meta__ = {
 shape = SubResource( 95 )
 
 [node name="HUD" parent="." instance=ExtResource( 13 )]
+
 [connection signal="body_entered" from="buraco" to="buraco" method="_on_buraco_body_entered"]

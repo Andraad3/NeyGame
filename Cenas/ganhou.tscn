@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Materiais/Fonte/OpenSans-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Materiais/BackGround/neymar-menu.jpg" type="Texture" id=2]
+[ext_resource path="res://Scripts/ganhou.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/pontos.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+
+[node name="ganhou" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 166.164, 93.6937 )
+scale = Vector2( 0.182925, 0.182925 )
+texture = ExtResource( 2 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 21.027
+margin_top = 49.8383
+margin_right = 114.027
+margin_bottom = 73.8383
+custom_fonts/normal_font = SubResource( 1 )
+text = "PAI TA ON"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 17.3513
+margin_top = 88.6217
+margin_right = 93.3513
+margin_bottom = 117.622
+custom_fonts/font = SubResource( 2 )
+text = "Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pontos" type="Label" parent="."]
+margin_left = 22.0
+margin_top = 135.209
+margin_right = 85.0
+margin_bottom = 151.209
+text = "0000"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

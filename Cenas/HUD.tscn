@@ -10,9 +10,6 @@
 [ext_resource path="res://Scripts/Inimigos.gd" type="Script" id=8]
 [ext_resource path="res://Scripts/Chefes.gd" type="Script" id=9]
 
-
-
-
 [sub_resource type="DynamicFont" id=1]
 size = 17
 outline_color = Color( 0.0666667, 0.0431373, 0.0431373, 1 )

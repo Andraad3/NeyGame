@@ -21,8 +21,9 @@ func _physics_process(delta):
 		direcao_mov *= -1
 
 
-func _on_hitbox_body_entered(body):
+func _on_hitbox_body_entered(body): #após o chefe ser morto, aparece a cena de vitória
 	vida -= 1
 	if vida < 1:
 		Global.chefes += 1
 		queue_free()
+		get_tree().change_scene("res://Cenas/ganhou.tscn")

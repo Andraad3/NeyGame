@@ -11,7 +11,7 @@ func _physics_process(delta):
 	velocidade = move_and_slide(velocidade)
 	velocidade.y = gravidade*delta
 	
-	if direcao_mov == 1:
+	if direcao_mov == 1: #após bater na parede, ele muda a direcao
 		$Sprite.flip_h = true
 	else:
 		$Sprite.flip_h = false

@@ -1,5 +1,6 @@
 extends Node
 
+#variaveis globais
 var trofeus = 0
 var juiz = 0
 var chefes = 0
@@ -9,9 +10,9 @@ var nome
 var pontos
 
 func _ready():
-	pass
+	pontuacao()
 
-
+#funcao para calcular pontuacao
 func pontuacao():
 	var pontos = (trofeus*10)+(juiz*50)+(chefes*100)
 	

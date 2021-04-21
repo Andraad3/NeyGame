@@ -56,4 +56,5 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
 position = Vector2( 0.125, -3.625 )
 shape = SubResource( 2 )
+
 [connection signal="body_entered" from="Hurtbox" to="." method="_on_Hurtbox_body_entered"]
