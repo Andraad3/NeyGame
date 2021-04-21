@@ -12,7 +12,8 @@
 [ext_resource path="res://Materiais/BackGround/campo de futebol.jpg" type="Texture" id=10]
 [ext_resource path="res://Personagens/juiz.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scripts/Reset_Level.gd" type="Script" id=12]
-[ext_resource path="res://HUD.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Cenas/HUD.tscn" type="PackedScene" id=13]
+
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )

@@ -4,6 +4,9 @@ var trofeus = 0
 var juiz = 0
 var chefes = 0
 var vida = 3
+var id
+var nome
+var pontos
 
 func _ready():
 	pass

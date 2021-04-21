@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="NeyGame"
-run/main_scene="res://Cenas/Fase1.tscn"
+run/main_scene="res://Cenas/Login.tscn"
 config/icon="res://icon.png"
 
 [autoload]
