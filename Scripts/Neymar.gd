@@ -47,6 +47,7 @@ func _on_Hurtbox_body_entered(body):
 	vida -= 1
 	knockback()
 	if vida < 1:
+		Global.vida -= 1
 		queue_free()
 		get_tree().reload_current_scene()
 	print(vida)

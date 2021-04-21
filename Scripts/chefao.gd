@@ -24,4 +24,5 @@ func _physics_process(delta):
 func _on_hitbox_body_entered(body):
 	vida -= 1
 	if vida < 1:
+		Global.chefes += 1
 		queue_free()
