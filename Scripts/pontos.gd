@@ -2,4 +2,4 @@ extends Label
 
 
 func _ready():
-	print(Global.pontos)
+	print(Global.melhor_pontuacao)

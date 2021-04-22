@@ -78,6 +78,7 @@ margin_left = 6.12372
 margin_top = 17.1339
 margin_right = 113.124
 margin_bottom = 41.1339
+text = "joao@gmail.com"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -87,6 +88,7 @@ margin_left = 8.12373
 margin_top = 56.6288
 margin_right = 113.124
 margin_bottom = 80.6288
+text = "123"
 secret = true
 __meta__ = {
 "_edit_use_anchors_": false
