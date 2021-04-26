@@ -48,5 +48,5 @@ func _on_Hurtbox_body_entered(body): #funcao que calcula o dano
 	if vida < 1:
 		Global.vida -= 1
 		queue_free()
-		get_tree().reload_current_scene()
+		get_tree().change_scene("res://Cenas/perdeu.tscn")
 	print(vida)
