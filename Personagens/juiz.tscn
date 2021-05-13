@@ -5,7 +5,7 @@
 [ext_resource path="res://Dano/hitbox.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 11.6777, 6.22069 )
+extents = Vector2( 11.6777, 12.5322 )
 
 [node name="Juiz" type="KinematicBody2D"]
 collision_layer = 2
@@ -17,7 +17,7 @@ scale = Vector2( 0.0534543, 0.0534543 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 7.28389 )
+position = Vector2( 0, 0.992123 )
 shape = SubResource( 1 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
@@ -27,5 +27,6 @@ collision_mask = 8
 
 [node name="hitbox" parent="." instance=ExtResource( 3 )]
 modulate = Color( 0.25098, 0.870588, 0.0745098, 1 )
+position = Vector2( 0, -3.47243 )
 
 [connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

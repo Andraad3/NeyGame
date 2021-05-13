@@ -12,7 +12,7 @@ func _on_Button_pressed():
 	get_tree().change_scene("res://Cenas/ranking.tscn")
 
 func atualizar_pontos(nova_pontuacao):
-	var url_requisicao = "http://localhost/neygame/atualizar_pontos.php?"
+	var url_requisicao = Global.site + "atualizar_pontos.php?"
 	var dados_envio = "id=" + Global.id + "&nova_pontuacao="+ str(nova_pontuacao)
 	var cabecalho   = ["Content-Type: application/x-www-form-urlencoded"]
 	$HTTPRequest.request(url_requisicao, cabecalho, false,HTTPClient.METHOD_POST, dados_envio)

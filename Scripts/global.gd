@@ -1,5 +1,7 @@
 extends Node
 
+var site = "http://neygame.freevar.com/jogo/php/"
+
 #variaveis globais
 var trofeus = 0
 var juiz = 0

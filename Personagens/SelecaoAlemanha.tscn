@@ -5,7 +5,7 @@
 [ext_resource path="res://Dano/hitbox_alemanha.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 22.8172, 13.04 )
+extents = Vector2( 22.8059, 13.7227 )
 
 [node name="Selecao_Alemanha" type="KinematicBody2D"]
 collision_layer = 2
@@ -13,11 +13,12 @@ collision_mask = 9
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 0.0594645, 0.0594645 )
+position = Vector2( -1.2226, -0.858171 )
+scale = Vector2( 0.0585815, 0.0585816 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.353554, 1.06066 )
+position = Vector2( -1.2226, 0 )
 shape = SubResource( 1 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
@@ -26,5 +27,6 @@ cast_to = Vector2( -35, 0 )
 collision_mask = 8
 
 [node name="hitbox" parent="." instance=ExtResource( 3 )]
+position = Vector2( -1.37125, 0 )
 
 [connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

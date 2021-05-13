@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 21.9763, 3.84228 )
+extents = Vector2( 22.0976, 6.23176 )
 
 [node name="hitbox" type="Area2D"]
 collision_layer = 32

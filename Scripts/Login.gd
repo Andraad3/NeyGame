@@ -1,7 +1,7 @@
 extends Node2D
 
 func _on_Button_pressed():
-	var url_requisicao = "http://localhost/neygame/login.php?"
+	var url_requisicao = Global.site +"login.php?"
 	var dados_envio = "email=" +$ColorRect/Line_Email.text + "&senha="+ $ColorRect/Line_Senha.text
 	var cabecalho   = ["Content-Type: application/x-www-form-urlencoded"]
 	$HTTPRequest.request(url_requisicao, cabecalho, false,HTTPClient.METHOD_POST, dados_envio)

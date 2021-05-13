@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 export var vel = 64
-export var vida = 1
+export var vida = 2
 var velocidade = Vector2.ZERO
 var direcao_mov = -1
 var gravidade = 1200
@@ -23,6 +23,7 @@ func _physics_process(delta):
 
 func _on_hitbox_body_entered(body):
 	vida -= 1
+	body.velocidade.y -= 300
 	if vida < 1:
 		Global.juiz += 1
 		queue_free()

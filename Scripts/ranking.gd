@@ -6,7 +6,7 @@ func _ready():
 	atualizar_ranking()
 
 func atualizar_ranking():
-	var url_requisicao = "http://localhost/neygame/ranking.php?"
+	var url_requisicao = Global.site + "ranking.php?"
 	var dados_envio = "";
 	var cabecalho   = ["Content-Type: application/x-www-form-urlencoded"]
 	$HTTPRequest.request(url_requisicao, cabecalho, false,HTTPClient.METHOD_POST, dados_envio)
@@ -29,6 +29,4 @@ func _on_HTTPRequest_request_completed(result, response_code, headers, body):
 
 
 func _on_Button_pressed():
-	get_tree().change_scene("res://Cenas/fases.tscn")
-
-
+	get_tree().change_scene("res://Cenas/Fases.tscn")
