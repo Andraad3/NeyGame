@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var vida = 10 #vida durante o jogo
+var vida = 5 #vida durante o jogo
 var velocidade = Vector2.ZERO #posiçao no jogo
 var trofeus = 0 #'moedas'
 var velocidade_mov = 150 #velocidade de movimento
@@ -48,5 +48,4 @@ func _on_Hurtbox_body_entered(body): #funcao que calcula o dano
 	if vida < 1:
 		Global.vida -= 1
 		queue_free()
-		get_tree().change_scene("res://Cenas/perdeu.tscn")
-	print(vida)
+		get_tree().reload_current_scene()

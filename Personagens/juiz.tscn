@@ -27,6 +27,6 @@ collision_mask = 8
 
 [node name="hitbox" parent="." instance=ExtResource( 3 )]
 modulate = Color( 0.25098, 0.870588, 0.0745098, 1 )
-position = Vector2( 0, -3.47243 )
+position = Vector2( 0, -9.02832 )
 
 [connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
