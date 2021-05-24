@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Materiais/BackGround/neymar-menu.jpg" type="Texture" id=1]
 [ext_resource path="res://Materiais/Fonte/OpenSans-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Scripts/perdeu.gd" type="Script" id=3]
+[ext_resource path="res://Materiais/Áudios/som_perdeu.mp3" type="AudioStream" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 2 )
@@ -39,5 +40,8 @@ text = "Menu"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

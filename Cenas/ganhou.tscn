@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Materiais/Fonte/OpenSans-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Materiais/BackGround/neymar-menu.jpg" type="Texture" id=2]
 [ext_resource path="res://Scripts/ganhou.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/pontos.gd" type="Script" id=4]
+[ext_resource path="res://Materiais/Áudios/som_ganhou.mp3" type="AudioStream" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 1 )
@@ -53,6 +54,9 @@ __meta__ = {
 }
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]

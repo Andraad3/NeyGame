@@ -29,4 +29,4 @@ func _on_HTTPRequest_request_completed(result, response_code, headers, body):
 
 
 func _on_Button_pressed():
-	get_tree().change_scene("res://Cenas/Fases.tscn")
+	get_tree().change_scene("res://Cenas/configuracao.tscn")

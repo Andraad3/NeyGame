@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/som_ganhou.mp3-3ab2803caff073d7a6930224f36c64c1.mp3str"
+
+[deps]
+
+source_file="res://Materiais/Áudios/som_ganhou.mp3"
+dest_files=[ "res://.import/som_ganhou.mp3-3ab2803caff073d7a6930224f36c64c1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/som_perdeu.mp3-932bb048c91260e0c0139c6e2ba678d7.mp3str"
+
+[deps]
+
+source_file="res://Materiais/Áudios/som_perdeu.mp3"
+dest_files=[ "res://.import/som_perdeu.mp3-932bb048c91260e0c0139c6e2ba678d7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -2,6 +2,7 @@ extends Node2D
 
 
 func _ready():
+	$AudioStreamPlayer.play(0.1)
 	var nova_pontuacao = (Global.trofeus*10)+(Global.juiz*50)+(Global.chefes*100)
 	$pontos.text = str(nova_pontuacao)
 	

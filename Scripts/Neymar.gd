@@ -23,8 +23,7 @@ func _physics_process(delta):
 
 func movimento(): #funcao de movimento
 	var direcao_mov = int(Input.is_action_pressed("move_right")) - int(Input.is_action_pressed("move_left")) #movimento do jogador
-	velocidade.x = lerp(velocidade.x, velocidade_mov * direcao_mov, 0.2)
-	
+	velocidade.x = lerp(velocidade.x, velocidade_mov * direcao_mov, 0.2) #define velocidade de movimento
 	if direcao_mov != 0:
 		knockback = direcao_mov
 

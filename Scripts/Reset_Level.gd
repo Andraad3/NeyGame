@@ -9,3 +9,6 @@ func _ready(): #reseta o level
 	if Global.vida < 1: #Aqui a cena reinicia após o número de tentativas ser batido
 		get_tree().change_scene("res://Cenas/perdeu.tscn")
 		Global.vida = 3
+		
+	if Global.som_fase1:
+		$AudioStreamPlayer.play(0.1)
