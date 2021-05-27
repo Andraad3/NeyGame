@@ -10,5 +10,5 @@ func _ready(): #reseta o level
 		get_tree().change_scene("res://Cenas/perdeu.tscn")
 		Global.vida = 3
 		
-	if Global.som_fases:
+	if Global.som_fase:
 		$AudioStreamPlayer.play(0.1)
