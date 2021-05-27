@@ -11,7 +11,7 @@ var id = 0
 var usuario = ""
 var melhor_pontuacao = 0
 
-var som_fase1 = true
+var som_fases = true
 
 func _ready():
 	pontuacao()

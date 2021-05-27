@@ -1,6 +1,6 @@
-[gd_scene load_steps=110 format=2]
+[gd_scene load_steps=109 format=2]
 
-[ext_resource path="res://Scripts/buraco.gd" type="Script" id=1]
+[ext_resource path="res://Cenas/buraco.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Itens/Trofeu.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Personagens/SelecaoAlemanha.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Personagens/Neymar.tscn" type="PackedScene" id=4]
@@ -2277,9 +2277,6 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 94/shapes = [  ]
 94/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=95]
-extents = Vector2( 182.165, 10 )
-
 [node name="Fase1" type="Node2D"]
 script = ExtResource( 12 )
 
@@ -2344,19 +2341,10 @@ position = Vector2( 226.019, 59.5939 )
 [node name="Trofeu6" parent="Trofeus" instance=ExtResource( 2 )]
 position = Vector2( 222.682, 163.044 )
 
-[node name="buraco" type="Area2D" parent="."]
-position = Vector2( 955.835, 277.581 )
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="buraco"]
-shape = SubResource( 95 )
+[node name="buraco" parent="." instance=ExtResource( 1 )]
+position = Vector2( 951.073, 277.581 )
 
 [node name="HUD" parent="." instance=ExtResource( 13 )]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 14 )
-
-[connection signal="body_entered" from="buraco" to="buraco" method="_on_buraco_body_entered"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/som_fase2.mp3-643e882aa0e86d0e0f396cdeb79955cd.mp3str"
+
+[deps]
+
+source_file="res://Materiais/Áudios/som_fase2.mp3"
+dest_files=[ "res://.import/som_fase2.mp3-643e882aa0e86d0e0f396cdeb79955cd.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
