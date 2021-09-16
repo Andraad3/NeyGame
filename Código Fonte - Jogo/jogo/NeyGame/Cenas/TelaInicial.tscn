@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Materiais/Fonte/OpenSans-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/TelaInicial.gd" type="Script" id=2]
+[ext_resource path="res://Materiais/BackGround/neymar-menu.jpg" type="Texture" id=3]
+[ext_resource path="res://Materiais/Neymar/neymar_frente.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 17
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+
+[node name="TelaInicial" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 169.094, 94.1062 )
+scale = Vector2( 0.187271, 0.187271 )
+texture = ExtResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 230.753, 53.0058 )
+scale = Vector2( 0.112948, 0.112948 )
+texture = ExtResource( 4 )
+
+[node name="Neygame" type="RichTextLabel" parent="."]
+margin_left = 31.0
+margin_top = 26.0
+margin_right = 138.0
+margin_bottom = 51.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "NEYGAME"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 32.8763
+margin_top = 90.3847
+margin_right = 109.876
+margin_bottom = 110.385
+custom_fonts/font = SubResource( 2 )
+text = "Login"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
